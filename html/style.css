@@ -27,7 +27,8 @@ body {
 	
     width: 100%;
     overflow: hidden;
-    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
+	font-family: Tahoma;
 	background-color: transparent;
 }
 
@@ -149,7 +150,6 @@ option {
 
 	position: relative;
 	margin-left: 1%;
-	float: left;
 	background-color: #828282;
 	
 }
@@ -157,8 +157,9 @@ option {
 #randomGenButton {
 	
 	position: relative; 
-	/* margin-left: 1.5%; */
-	margin-left: 1.75%;
+	/* margin-left: 1.75%; */
+	margin-left: 1.3vh;
+	margin-top: 1vh;
 	background-color: #5e5e5e;
 	border-radius: 4px;
 
@@ -172,10 +173,11 @@ option {
 
 #frequencyLabel {
 	
-	color: #41f007;
 	position: relative; 
+	color: #41f007;
 	/* margin-left: 1%; */
 	margin-left: 1vh;
+	/* margin-top: 20%; */
 	
 }
 
@@ -187,10 +189,11 @@ option {
 
 #codeLabel {
 	
-	color: #41f007;
 	position: relative; 
+	color: #41f007;
 	/* margin-left: 1%; */
 	margin-left: 1vh;
+	/* margin-top: 20vh; */
 	
 }
 
@@ -207,6 +210,7 @@ option {
 	margin-left: 12vh;
 	background-color: #5e5e5e;
 	border-radius: 4px;
+	margin-top: 1vh;
 }
 
 #abortButton:hover {
@@ -225,7 +229,7 @@ option {
 	width: 10vh;
 	height: 2.8vh;
 	background-color: #ff8178;
-	margin-top: 1%;
+	/* margin-top: 1%; */
 }
 
 #hackButton:hover {
@@ -242,13 +246,15 @@ option {
 } */
 
 #failRadio1 {
-	margin-left: 25%;
+	/* margin-left: 25%; */
+	margin-left: 25vh;
 }
 
 #failDiv {
 	
 	/* margin-left: 25%; */
 	margin-left: 30vh;
+	margin-top: 1.5vh;
 	
 }
 

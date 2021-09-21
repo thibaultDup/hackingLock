@@ -27,6 +27,7 @@ targetedVehicle = nil
 
 -- THREADS --------------------------------------------------------------------------
 
+-- Main Thread - Check if the player press H and if so start the script sequences
 Citizen.CreateThread(function()
 
 	print("Client running")
@@ -63,7 +64,7 @@ Citizen.CreateThread(function()
 				
 				--Get the model of the vehicle near the player
 				_model = GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))
-				print(_model)
+				--print(_model)
 				
 				--Send the model of the car and the showStatus to the UI (NUI)
 				SendNUIMessage({
@@ -148,27 +149,29 @@ end
 
 -- NUI CALLBACKS --------------------------------------------------------------------------
 
-
 RegisterNUICallback('multifunctionCallback', function(data, cb) 
 
 	local _abort = data.abort
 	local _hackFailed = data.hackFailed
 	local _hackSuccess = data.hackSuccess
 	
-	print(_hackFailed)
+	--print(_hackFailed)
 	
+	--When the player press the UI [ ABORT ] button
 	if(_abort == "true") then
 	
 		dropTheHack()
 	
 	end
 	
+	--When the player Failed 3 times
 	if(_hackFailed == "true") then
 	
 		triggerAlarm()
 	
 	end
 	
+	--When the player succed at hacking the car
 	if(_hackSuccess == "true") then
 	
 		unclockCar()
@@ -180,16 +183,13 @@ RegisterNUICallback('multifunctionCallback', function(data, cb)
 end)
 
 
-
-
-
 -- END NUI CALLBACKS --------------------------------------------------------------------------
 
 
 
 -- TODO ------------------------------------------------------------------------------------
---  -Make a [ unclockCar() ] function that will unlock the car when we receive an NUICallback (if the player successfuly hacked)
---	-Make a [ triggerAlarm() ] function that will trigger the car alarm when we receive an NUICallback (if the player fail the hacked)
--- -Make the [ droptTheHack() ] function
+--  [GOOD] Make a [ unclockCar() ] function that will unlock the car when we receive an NUICallback (if the player successfuly hacked)
+--	[GOOD] Make a [ triggerAlarm() ] function that will trigger the car alarm when we receive an NUICallback (if the player fail the hacked)
+--  [GOOD] Make the [ droptTheHack() ] function
 
 

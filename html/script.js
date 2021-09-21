@@ -33,6 +33,8 @@ $(window.document).ready(function() {
 /* To get from the script - set to ADDER for testing purpuses*/
 var carModel = "";
 
+/* -------------- EVENTS LISTNER-------------- */
+
 window.addEventListener('message', (event) => {
 	
 	// If the model of the car is sent by the script
@@ -60,9 +62,11 @@ window.addEventListener('message', (event) => {
 		
 	}
 	
-	console.log("MESSAGE RECEIVED");
+	//console.log("MESSAGE RECEIVED");
 	
 });
+
+/* -------------- End EVENTS LISTNER-------------- */
 
 
 /* --------------Declare variables-------------- */
@@ -319,6 +323,10 @@ var AP = "";
 var numberOfFails = 0;
 var intervalFrequency = null;
 
+/* --------------End Declare variables-------------- */
+
+
+/* -------------- FUNCTIONS -------------- */
 
 /* Function triggered as soon as the htlm is loaded */
 function OnLoad()
@@ -594,15 +602,7 @@ function shuffleArray(inputArray){
     inputArray.sort(()=> Math.random() - 0.5);
 }
 
-
-/* TEST */
-function test()
-{
-	
-/* 	window.document.getElementById("typingAreaId").innerHTML = "TEST" */
-	
-}
-
+/* -------------- End FUNCTIONS -------------- */
 
 
 
@@ -610,4 +610,4 @@ function test()
 /* --------- TODO ---------------------------------------------------------- */
 
 /* - [GOOD] Shuffle the list before initializing the Select Element */
-/* - Deal with the input [ randomGenArea ] wich doesn't want to reset when abort of fail */
+/* - [GOOD] Deal with the input [ randomGenArea ] wich doesn't want to reset when abort of fail */
